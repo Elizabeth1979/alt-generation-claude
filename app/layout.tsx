@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Wix_Madefor_Display as WixMadefor } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
 import { Navigation } from "./components/ui/navigation";
@@ -9,7 +8,7 @@ const wixMadefor = WixMadefor({
   variable: "--font-wix-madefor",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Alt Text Generator - Create Accessible Image Descriptions",
   description: "Generate accessible, context-aware alt text for your images using AI",
 };

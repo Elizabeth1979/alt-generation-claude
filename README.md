@@ -24,6 +24,7 @@ A web application that helps generate meaningful alt text for images using AI. T
 ## Best Practices for Alt Text
 
 This tool follows these key principles:
+
 - Keeps descriptions concise and meaningful
 - Includes text that appears in images
 - Marks decorative images appropriately
@@ -34,6 +35,7 @@ This tool follows these key principles:
 ## Technical Details
 
 The application is built using:
+
 - Next.js for the framework
 - React for the UI
 - Tailwind CSS for styling
@@ -43,6 +45,7 @@ The application is built using:
 ## Project Status
 
 This is an alt text generator project that uses AI to help create accessible image descriptions. If you're interested in using or building upon this project, feel free to:
+
 - Try it out
 - Suggest improvements
 - Share your feedback
