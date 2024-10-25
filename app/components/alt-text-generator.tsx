@@ -98,7 +98,7 @@ export default function AltTextGenerator() {
       <CardContent className="space-y-4">
         {/* Error Alert */}
         {error && (
-          <Alert variant="destructive">
+          <Alert>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
         )}
