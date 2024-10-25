@@ -65,7 +65,8 @@ export async function POST(request: Request) {
     });
 
     // Get the description text from the response
-    const rawDescription = descriptionResponse.content[0].text;
+    const rawDescription =
+      descriptionResponse.content[0].type === "text" ? descriptionResponse.content[0].text : "";
 
     // Generate alt text using description and context
     const altTextResponse = await anthropic.messages.create({
@@ -84,7 +85,7 @@ export async function POST(request: Request) {
                   2. If the image contains text, include that text
                   3. Keep it concise but descriptive
                   4. Focus on the meaning in context, not just visual description
-                  5. Max length 125 characters`,
+                  5. Follow the alt decision tree best practices`,
             },
           ],
         },
@@ -92,7 +93,8 @@ export async function POST(request: Request) {
     });
 
     // Get the alt text from the response
-    const altText = altTextResponse.content[0].text;
+    const altText =
+      altTextResponse.content[0].type === "text" ? altTextResponse.content[0].text : "";
 
     return NextResponse.json({
       rawDescription,

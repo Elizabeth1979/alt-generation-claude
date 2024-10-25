@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alt Text Generator
 
-## Getting Started
+A web application that helps generate meaningful alt text for images using AI. This tool follows accessibility best practices and helps ensure your images are accessible to everyone.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Drag-and-drop or click-to-upload image functionality
+- Supports JPEG, PNG, GIF, and WebP formats
+- Context-aware alt text generation
+- Detailed image descriptions
+- Real-time preview
+- Accessibility-first design
+- Built with AI-powered image analysis
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It Works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Upload an Image**: Either drag and drop an image or click to select one from your device.
+2. **Add Context**: Provide information about where the image will appear on your website or application.
+3. **Generate**: Click the "Generate Alt Text" button to analyze the image.
+4. **Review Results**: You'll receive both:
+   - A concise alt text suitable for the `alt` attribute
+   - A detailed description of the image
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Best Practices for Alt Text
 
-## Learn More
+This tool follows these key principles:
+- Keeps descriptions concise and meaningful
+- Includes text that appears in images
+- Marks decorative images appropriately
+- Considers context when generating descriptions
+- Focuses on the purpose and meaning of images, not just visual details
+- Keeps descriptions concise for optimal screen reader experience
 
-To learn more about Next.js, take a look at the following resources:
+## Technical Details
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application is built using:
+- Next.js for the framework
+- React for the UI
+- Tailwind CSS for styling
+- Claude AI for image analysis and text generation
+- Shadcn/UI for accessible component primitives
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Status
 
-## Deploy on Vercel
+This is an alt text generator project that uses AI to help create accessible image descriptions. If you're interested in using or building upon this project, feel free to:
+- Try it out
+- Suggest improvements
+- Share your feedback
+- Fork the project for your own use
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Note: Formal contribution guidelines haven't been established yet. If you're interested in contributing, please reach out to discuss possibilities.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+License information pending. Please add appropriate licensing terms for your project.
+
+## Acknowledgments
+
+- Built with accessibility guidelines from [WCAG 2.1](https://www.w3.org/WAI/tutorials/images/decision-tree/?s=03)
+- Uses Anthropic's Claude AI for intelligent image analysis
+- UI components from Shadcn/UI library
