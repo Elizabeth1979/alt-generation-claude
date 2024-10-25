@@ -1,33 +1,54 @@
 import React from "react";
 import AltTextGenerator from "./components/alt-text-generator";
-import AltTextHelper from "./components/alt-text-helper";
+import { Info } from "lucide-react";
+import { LinkButton } from "./components/ui/link-button";
 
 export default function Home() {
   return (
-    <main className="container mx-auto p-4">
-      <div className="space-y-8">
-        {/* Title Section */}
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-2">Alt Text Tools</h1>
-          <p className="text-gray-600">
-            Generate and learn about accessible alt text for your images
+    <main className="flex-1 container mx-auto p-4 pt-8">
+      <div className="space-y-12 max-w-3xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl font-bold mb-4">AI-Powered Alt Text Generator</h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Create accessible, contextual alt text for your images using advanced AI. Make your
+            content accessible to everyone, effortlessly.
           </p>
+          <div className="flex justify-center gap-4 pt-4">
+            <LinkButton href="/about" size="lg" className="inline-flex items-center">
+              <Info className="mr-2 h-5 w-5" />
+              Learn More
+            </LinkButton>
+          </div>
         </div>
 
-        {/* Vertical Layout */}
-        <div className="space-y-8 max-w-2xl mx-auto">
-          {/* Generator Section */}
-          <section>
-            <h2 className="text-xl font-semibold mb-4">Generate Alt Text</h2>
-            <AltTextGenerator />
-          </section>
+        {/* Key Features */}
+        <section className="grid md:grid-cols-3 gap-6 py-8">
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold">Context-Aware</h3>
+            <p className="text-muted-foreground">
+              Generates alt text that considers both image content and surrounding context
+            </p>
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold">WCAG Compliant</h3>
+            <p className="text-muted-foreground">
+              Follows accessibility guidelines to ensure proper image descriptions
+            </p>
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold">AI-Powered</h3>
+            <p className="text-muted-foreground">
+              Uses advanced AI to analyze images and generate accurate descriptions
+            </p>
+          </div>
+        </section>
 
-          {/* Decision Helper Section */}
-          <section>
-            <h2 className="text-xl font-semibold mb-4">Learn Alt Text Rules</h2>
-            <AltTextHelper />
-          </section>
-        </div>
+        {/* Generator Section */}
+        <section className="space-y-6">
+          <h2 className="text-2xl font-semibold text-center">Try It Now</h2>
+          <AltTextGenerator />
+        </section>
       </div>
     </main>
   );
