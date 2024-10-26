@@ -86,7 +86,7 @@ export default function AltTextGenerator() {
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">Alt Text Generator</CardTitle>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" aria-label="Help">
             <HelpCircle className="h-5 w-5" />
           </Button>
         </div>
@@ -110,6 +110,8 @@ export default function AltTextGenerator() {
           }`}
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
+          role="region"
+          aria-label="Image upload area"
         >
           {preview ? (
             <div className="relative">
@@ -129,7 +131,7 @@ export default function AltTextGenerator() {
             </div>
           ) : (
             <div className="space-y-4">
-              <Camera className="mx-auto h-12 w-12 text-gray-400" />
+              <Camera className="mx-auto h-12 w-12 text-gray-400" aria-hidden="true" />
               <div>
                 <input
                   type="file"
@@ -156,12 +158,17 @@ export default function AltTextGenerator() {
 
         {/* Context Input */}
         <div className="space-y-2">
-          <label htmlFor="context" className="block text-sm font-medium">
-            Context
-            <span className="text-gray-500 ml-2 font-normal">(Where will this image appear?)</span>
-          </label>
+          <div className="flex items-center">
+            <label htmlFor="context" className="block text-sm font-medium" id="context-label">
+              Context
+              <span className="text-gray-500 ml-2 font-normal">
+                (Where will this image appear?)
+              </span>
+            </label>
+          </div>
           <textarea
             id="context"
+            aria-labelledby="context-label"
             className="w-full h-24 p-2 border rounded-md"
             placeholder="Enter surrounding content or context for the image..."
             value={context}
@@ -170,7 +177,12 @@ export default function AltTextGenerator() {
         </div>
 
         {/* Generate Button */}
-        <Button onClick={handleSubmit} disabled={!image || loading} className="w-full">
+        <Button
+          onClick={handleSubmit}
+          disabled={!image || loading}
+          className="w-full"
+          aria-label={loading ? "Analyzing image..." : "Generate alt text"}
+        >
           {loading ? "Analyzing..." : "Generate Alt Text"}
         </Button>
 
