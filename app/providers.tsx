@@ -1,19 +1,36 @@
-import { useEffect } from "react";
-import React from "react"; // Add this import
+"use client";
+
+import React, { useEffect } from "react";
 
 export function AccessibilityProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    if (process.env.NODE_ENV !== "production") {
-      const axe = require("@axe-core/react");
-      const ReactDOM = require("react-dom");
-      axe(React, ReactDOM, 1000, {
-        rules: [{ id: "*", enabled: true }],
-      }).catch((err: Error) => {
-        console.error("Accessibility issues found:", err);
-      });
+    // Add immediate logging to verify the code runs
+    console.log("🔍 AccessibilityProvider mounted");
 
-      // Optional: Add more visible logging
-      console.log("🔍 Axe accessibility checker is running...");
+    if (process.env.NODE_ENV !== "production") {
+      console.log("🔧 Development mode detected - initializing axe");
+
+      const initAxe = async () => {
+        try {
+          console.log("📦 Loading axe-core...");
+          const axe = await import("@axe-core/react");
+          const ReactDOM = await import("react-dom");
+
+          console.log("⚡ Configuring axe...");
+          await axe.default(React, ReactDOM, 1000, {
+            rules: [{ id: "*", enabled: true }],
+          });
+
+          console.log("✅ Accessibility checker successfully initialized!");
+        } catch (error) {
+          console.error("❌ Error initializing accessibility checker:", error);
+          console.error("Detailed error:", error);
+        }
+      };
+
+      initAxe();
+    } else {
+      console.log("⚠️ Production mode - axe checks disabled");
     }
   }, []);
 
