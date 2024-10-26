@@ -90,7 +90,7 @@ export default function AltTextGenerator() {
             <HelpCircle className="h-5 w-5" />
           </Button>
         </div>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-slate-600">
           Upload an image and provide context to generate accessible alt text
         </p>
       </CardHeader>
@@ -131,7 +131,7 @@ export default function AltTextGenerator() {
             </div>
           ) : (
             <div className="space-y-4">
-              <Camera className="mx-auto h-12 w-12 text-gray-400" aria-hidden="true" />
+              <Camera className="mx-auto h-12 w-12 text-slate-600" aria-hidden="true" />
               <div>
                 <input
                   type="file"
@@ -149,8 +149,8 @@ export default function AltTextGenerator() {
                 >
                   Choose Image
                 </Button>
-                <p className="mt-2 text-sm text-gray-500">or drag and drop</p>
-                <p className="mt-1 text-xs text-gray-400">Supports JPEG, PNG, GIF, and WebP</p>
+                <p className="mt-2 text-sm text-slate-600">or drag and drop</p>
+                <p className="mt-1 text-xs text-slate-600">Supports JPEG, PNG, GIF, and WebP</p>
               </div>
             </div>
           )}
@@ -161,7 +161,7 @@ export default function AltTextGenerator() {
           <div className="flex items-center">
             <label htmlFor="context" className="block text-sm font-medium" id="context-label">
               Context
-              <span className="text-gray-500 ml-2 font-normal">
+              <span className="text-slate-600 ml-2 font-normal">
                 (Where will this image appear?)
               </span>
             </label>

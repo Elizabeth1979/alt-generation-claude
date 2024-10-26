@@ -23,24 +23,27 @@ export default function Home() {
         </div>
 
         {/* Key Features */}
-        <section className="grid md:grid-cols-3 gap-6 py-8">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Context-Aware</h3>
-            <p className="text-muted-foreground">
-              Generates alt text that considers both image content and surrounding context
-            </p>
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold">WCAG Compliant</h3>
-            <p className="text-muted-foreground">
-              Follows accessibility guidelines to ensure proper image descriptions
-            </p>
-          </div>
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold">AI-Powered</h3>
-            <p className="text-muted-foreground">
-              Uses advanced AI to analyze images and generate accurate descriptions
-            </p>
+        <section className="space-y-6">
+          <h2 className="text-2xl font-semibold text-center">Key Features</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold">Context-Aware</h3>
+              <p className="text-muted-foreground">
+                Generates alt text that considers both image content and surrounding context
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold">WCAG Compliant</h3>
+              <p className="text-muted-foreground">
+                Follows accessibility guidelines to ensure proper image descriptions
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold">AI-Powered</h3>
+              <p className="text-muted-foreground">
+                Uses advanced AI to analyze images and generate accurate descriptions
+              </p>
+            </div>
           </div>
         </section>
 
