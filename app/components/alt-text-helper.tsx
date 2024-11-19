@@ -159,7 +159,6 @@ const AltTextHelper = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
         )}
-        <CardTitle>Alt Text Decision Helper</CardTitle>
       </CardHeader>
       <CardContent>{renderContent()}</CardContent>
     </Card>

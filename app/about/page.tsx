@@ -17,7 +17,7 @@ export default function About() {
 
           {/* Alt Text Decision Helper Section */}
           <section>
-            <h2 className="text-2xl font-semibold mb-6">Alt Text Decision Guide</h2>
+            <h2 className="text-2xl font-semibold mb-6">Alt Text Decision Tree</h2>
             <AltTextHelper />
           </section>
 
