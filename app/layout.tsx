@@ -22,15 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${wixMadefor.variable} font-sans antialiased min-h-screen bg-background`}>
+      <body
+        className={`${wixMadefor.variable} font-sans antialiased min-h-screen bg-background`}
+        suppressHydrationWarning
+      >
         <ThemeProvider defaultTheme="system" storageKey="alt-text-theme">
           <AccessibilityProvider>
-            {/* Add a test element to trigger some axe checks */}
-            <div>
-              <div className="relative min-h-screen flex flex-col">
-                <Navigation />
-                {children}
-              </div>
+            <div className="relative min-h-screen flex flex-col">
+              <Navigation />
+              {children}
             </div>
           </AccessibilityProvider>
         </ThemeProvider>
